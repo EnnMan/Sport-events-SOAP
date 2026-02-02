@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+
+    <!-- Configuration des endpoints SOAP -->
+    
+    <endpoint
+            name="TeamService"
+            implementation="com.tripleMen.sportevents.soap.TeamSOAP"
+            url-pattern="/services/team"/>
+
+    <endpoint
+            name="StadiumService"
+            implementation="com.tripleMen.sportevents.soap.StadiumSOAP"
+            url-pattern="/services/stadium"/>
+
+    <endpoint
+            name="MatchService"
+            implementation="com.tripleMen.sportevents.soap.MatchSOAP"
+            url-pattern="/services/match"/>
+
+</endpoints>
