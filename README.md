@@ -80,6 +80,10 @@ Le projet suit une **architecture en couches** claire et simple :
 
 ```
 SportEventsSoap/
+├── .github/                         # 🔄 Configuration GitHub
+│   └── workflows/
+│       └── ci.yml                   # Pipeline CI/CD (build automatique)
+│
 ├── src/
 │   ├── main/
 │   │   ├── java/com/tripleMen/sportevents/
@@ -123,6 +127,7 @@ SportEventsSoap/
 │   │
 │   └── test/                        # Tests unitaires (à implémenter)
 │
+├── .gitignore                       # Fichiers ignorés par Git
 ├── pom.xml                          # Configuration Maven
 └── README.md                        # Documentation du projet
 ```
@@ -208,6 +213,17 @@ public Team createTeam(String name, String country, Integer foundedYear) {
 - getEntityManager() : Fournit un EntityManager
 - close()            : Ferme l'EntityManagerFactory
 ```
+
+### 📦 6. **.github/workflows/** - Intégration Continue (Optionnel)
+
+**ci.yml** : Configuration GitHub Actions pour automatiser le build du projet.
+
+**Fonctionnalités :**
+- Compile automatiquement le projet à chaque push
+- Vérifie que `mvn clean package` fonctionne
+- Utile pour valider que le code est fonctionnel avant de merger
+
+**Note :** Cette fonctionnalité est optionnelle et n'est pas requise pour le fonctionnement du projet. Elle démontre une bonne pratique de développement en équipe.
 
 ---
 
